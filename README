@@ -1,0 +1,38 @@
+*******************************************************************************************************************
+Auteurs du code : Mathilde GARRIGUES, Abderrafie MOUNADIM et Rime RAISSOUNI
+*******************************************************************************************************************
+
+****** Ce dossier contient tous les fichiers python nécessaires pour lancer un algorithme de recherche tabou appliqué au problème AGAP ou affectation de portes aux vols dans un aéroport. Les fichiers sont:
+
+- main.py : pour 1- lire les données d'une instance de problème GAP (p.e. GAP5_25.txt)
+		 2- lancer l'algorithme tabou en choisissant quelques paramètres (voisinage, nombre d'itérations, solution initiale)
+
+- tabu.py : fichier contenant l'implémentation de l'algorithme tabou et ses éléments internes (correspond à une classe Tabu)
+
+- neighborhood.py : fichier contenant l'implémentation des méthodes de voisinage (correspond à une classe Neighborhood)
+
+- neighbor.py :  fichier contenant l'implémentation de la classe Neighbor, une définition d'une solution voisine et ses mouvements générants
+
+- tabu_list.py : fichier correspondant à la classe Tabu_list qui implémente une liste tabou
+
+- flight.py : fichier définissant la classe Flight, qui correspond à la définition d'un vol
+
+- fonctionm.py : fichier qui implémente le calcul du coût d'une solution donnée
+
+- data.py : fichier qui lit les données d'un fichier .txt d'une instance du problème GAP (trouvées dans le dossier /data) et retourne les structures de données necessaires pour la manipulation de ses données
+
+- LIFO.py : implémentation de la heuristique LIFO
+
+* Les fichiers 'test.py', 'test_fm.py' et 'new_fonctionm.py' ne sont pas nécessaires pour le fonctionnement de l'algorithme. 'test' et 'test_fm' offrent juste une vision de comment peut-on tester quelques fonctions de 'tabu.py' et 'fonctionm.py', respectivement. Quant au fichier 'new_fonctionm.py', il contient une implémentation de la delta-évaluation, méthode d'amélioration du temps de calcul de l'algorithme.
+
+
+************************** Pour utiliser le code, veuillez écrire la commande suivante: *****************************
+> python main.py
+
+****** Pour choisir les paramètres ou le fichier de données 'data', veuillez changer les paramètres suivants de 'main.py':
+- filename : par défault, on a mis 'data/GAP5_txt'
+- SWAP : pour changer la méthode de génération de voisinage (basé sur swap ou non)
+- KMAX : pour choisir le nombre d'itérations maximale de l'algorithme (100, 300 ou 600)
+- RANDOM : pour choisir une solution initiale fixe ou aléatoire
+
+
